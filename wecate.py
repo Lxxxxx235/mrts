@@ -20,5 +20,7 @@ def send_wx(x):
         },
         "safe": 0,
     }
+    data = json.dumps(data)
+    return req.post(url, data=data, timeout=9).text
 
-send_wx('哈哈哈')
+print(send_wx('哈哈哈'))
