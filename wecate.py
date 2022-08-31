@@ -1,10 +1,10 @@
 import json
-
+import os
 import requests as req
 
-corpid = 'ww441664d5b785bbdb'  # 企业微信的 corpid
-corpsecret = 'u9ry2P1Yhj0_F_LFjD3kgsKw4vat16TNqgUtQiMKfus'  # 企业微信 corpsecret
-appid = '1000003'  # 企业微信 appid
+corpid = os.environ["CORPID"]  # 企业微信的 corpid
+corpsecret = os.environ["CORPSECRER"]  # 企业微信 corpsecret
+appid = os.environ["APPID"]  # 企业微信 appid
 
 def send_wx(x):
     url = f'https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={corpid}&corpsecret={corpsecret}'
