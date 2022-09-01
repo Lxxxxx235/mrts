@@ -28,8 +28,3 @@ jobs:
       run: pip install -r ./requirements.txt
     - name: 'Working'
       run: bash ./main.sh
-    - env: 
-        #设置secrets的环境变量
-          CORPID: ${{ secrets.CORPID}}
-          CORPSECRER: ${{ secrets.CORPSECRER}}
-          APPID: ${{ secrets.APPID}}
